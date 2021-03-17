@@ -1,0 +1,21 @@
+.fa-sign-out-alt
+{
+    color: rgb(230, 100, 100);
+    padding-left: 5px;
+}
+.fa-user-edit
+{
+    padding: 10px;
+}
+
+.img-circle
+{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.fs-16
+{
+    font-size: 16pt;
+    font-weight: bolder;
+}

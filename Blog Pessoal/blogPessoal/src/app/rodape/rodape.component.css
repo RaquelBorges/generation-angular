@@ -1,0 +1,19 @@
+ul.social li
+{
+    list-style: none;
+    display: inline-table;
+    padding: 5px;
+}
+
+.fab
+{
+    font-size: 35pt;
+    color: white;
+    padding: 20px;
+}
+
+.fab:hover
+{
+    color: rgb(174, 174, 235); 
+    transform: scale(1.1);
+}
