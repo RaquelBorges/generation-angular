@@ -4,13 +4,19 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 795px;
+    height: 100vh;
 }
+
 
 .fas
 {
-    font-size: 45pt;
+    font-size: 30pt;
     color: gray;
     padding-inline-start: 10px;
     padding-top: 10px;
+}
+
+label
+{
+    font-size: 10pt;
 }
