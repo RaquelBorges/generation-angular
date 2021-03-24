@@ -1,1 +1,75 @@
-<p>home works!</p>
+<div class="jumbotron">
+    <div class="container-fluid">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-8">
+                <h1 class="display-4">Seja bem vinde!</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra
+                    attention to featured content or information.</p>
+                <hr class="my-4">
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.
+                </p>
+            
+                    <a class="btn btn-success mr-3" data-toggle="modal" data-target="#novaPostagem" href="#" role="button">Compartilhar pensamento</a>
+                    <a class="btn btn-outline-secondary" href="#postagens" role="button">Ver postagens</a>
+                
+                </div>
+                <div class="col-md-4">
+                    <img class="img img-fluid" src="../../assets/img/home.png" alt="">
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="postagens">
+    <nav>
+        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+          <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+          <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+          <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+      </div>
+</div>
+
+
+<!--modal-->
+
+<div class="modal fade" id="novaPostagem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nova Postagem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="titulo" class="col-form-label">Titulo da postagem</label>
+            <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título da Postagem">
+          </div>
+          <div class="form-group">
+            <label for="texto" class="col-form-label">Digite seu texto</label>
+            <textarea class="form-control" id="texto" name="texto" rows="5"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="tema" class="col-form-label">Escolha um tema ou <a routerLink="/tema" data-dismiss="modal">cadastre um novo</a></label>
+            <select class="form-control" id="tema" name="tema">
+                <option value="">Temas</option>
+            </select>
+            
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
