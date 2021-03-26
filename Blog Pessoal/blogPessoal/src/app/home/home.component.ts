@@ -18,8 +18,8 @@ export class HomeComponent implements OnInit {
 
     if(environment.token == "")
     {
-      /*alert("sua sessão expirou")
-      this.router.navigate(["/login"])*/
+      alert("sua sessão expirou")
+      this.router.navigate(["/login"])
     }
   }
 
