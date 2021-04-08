@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { OrderModule } from 'ngx-order-pipe';
+
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
@@ -15,6 +18,12 @@ import { HashLocationStrategy, LocationStrategy} from '@angular/common';
 import { TemaComponent } from './tema/tema.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { AlertaComponent } from './alerta/alerta.component';
+
+
 
 @NgModule({
   declarations: [
@@ -26,14 +35,20 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
     HomeComponent,
     TemaComponent,
     TemaEditComponent,
-    TemaDeleteComponent
+    TemaDeleteComponent,
+    PostagemEditComponent,
+    PostagemDeleteComponent,
+    UsuarioEditComponent,
+    AlertaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot(),
+    OrderModule
   ],
   providers: [{
     provide: LocationStrategy,

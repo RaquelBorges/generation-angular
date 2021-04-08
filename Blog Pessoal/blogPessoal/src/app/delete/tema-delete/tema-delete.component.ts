@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Tema } from 'src/app/model/Tema';
+import { AlertaService } from 'src/app/service/alerta.service';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -17,7 +18,8 @@ export class TemaDeleteComponent implements OnInit {
   constructor(
     private temaService: TemaService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alerta: AlertaService
   ) { }
 
   ngOnInit() {
@@ -27,7 +29,7 @@ export class TemaDeleteComponent implements OnInit {
 
     if(environment.token == "")
     {
-      alert("sua sessão expirou")
+      this.alerta.showAlertInfo("sua sessão expirou")
       this.router.navigate(["/login"])
     }
 
@@ -43,7 +45,7 @@ export class TemaDeleteComponent implements OnInit {
     apagar()
     {
       this.temaService.deleteTema(this.idTema).subscribe(()=>{
-        alert("Tema excluído com sucesso")
+        this.alerta.showAlertSuccess("Tema excluído com sucesso")
         this.router.navigate(["/tema"])
       })
     }
