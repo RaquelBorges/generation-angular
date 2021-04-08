@@ -25,6 +25,8 @@ export class HomeComponent implements OnInit {
   listaPostagens: Postagem[]
   key = "data"
   reverse = true
+  tituloPost: string
+  nomeTema: string
 
   constructor(
     private router: Router,
@@ -75,8 +77,31 @@ export class HomeComponent implements OnInit {
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => { this.postagem = resp })
     this.alerta.showAlertSuccess("Postagem realizada com sucesso")
     this.postagem = new Postagem()
-    
+
     this.getAllPostagens()
+  }
+
+  findByTituloPostagem() {
+    if (this.tituloPost == "") {
+      this.getAllPostagens()
+    }
+    else {
+      this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
+      })
+    }
+
+  }
+
+  findByNomeTema() {
+    if (this.nomeTema == "") {
+      this.getAllTemas()
+    }
+    else {
+      this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[]) => { 
+        this.listaTemas = resp 
+      })
+    }
   }
 
 }
