@@ -1,14 +1,13 @@
 <div class="container-fluid bg-secondary">
     <div class="row">
         <div class="col-md-12 text-white">
-            <a routerLink="/home" class="text-left text-white">Início</a>
-            <h1 class="fs-54 text-center">Temas</h1>
+            <h2 class="fs-54 text-center">Temas</h2>
             <h5 class="text-center">Veja aqui todos os temas cadastrados ou cadastre um novo</h5>
         </div>
     </div>
 
     <div class="row d-flex justify-content-center mt-4 mb-5">
-        <div class="col-md-3">
+        <div *ngIf="tipo == admin" class="col-md-3">
             <div class="form-group">
                 <input [(ngModel)]="tema.descricao" type="text" class="form-control" id="descricao"
                     placeholder="Digite aqui a descrição do tema">
@@ -41,7 +40,7 @@
                     <tr *ngFor="let tema of listaTemas">
                         <th> {{tema.id}} </th>
                         <td> {{tema.descricao}}</td>
-                        <td class="d-flex justify-content-end">
+                        <td *ngIf="tipo == admin" class="d-flex justify-content-end">
                             <button class="btn btn-success mr-3" [routerLink]="['/tema-edit', tema.id]">Editar</button>
                             <button class="btn btn-danger" [routerLink]="['/tema-delete', tema.id]">Apagar</button>
                         </td>
@@ -52,4 +51,3 @@
         </div>
     </div>
 </div>
-

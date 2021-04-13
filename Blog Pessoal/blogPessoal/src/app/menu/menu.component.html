@@ -1,24 +1,29 @@
-
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="{{foto}}" alt="img user" class="img-fluid img-circle" ></a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-2 mb-lg-0 d-flex align-items-center">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"> <p class="text-white fs-16 m-0">{{nome}}</p></a>
-            </li>
-            <li class="nav-item">
-              <a [routerLink]="['/usuario-edit', id]"><i class="fas fa-user-edit text-white"></i></a> 
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto mb-2 mb-lg-0 d-flex align-items-center">
-            <li>
-                <div>
-                    <a href="" class="text-white text-decoration-none fs-16">Sair
-                       <i class="fas fa-sign-out-alt"></i></a>
-                </div>
-              </li>
-        </ul>
-      </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="{{foto}}" alt="img user" class="img-fluid img-circle"></a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 d-flex align-items-center">
+        <li class="nav-item">
+          <a [routerLink]="['/usuario-edit', id]"><i class="fas fa-user-edit text-white m-0 p-0"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">
+            <p class="text-white fs-16 m-0">{{nome}}</p>
+          </a>
+        </li>
+        <li class="nave-item">
+          <a routerLink="/home"> <i class="fas fa-home text-white ml-3"> </i></a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0 d-flex align-items-center">
+        <li>
+          <div>
+            <a href="" class="text-white text-decoration-none fs-16">Sair
+              <i class="fas fa-sign-out-alt"></i></a>
+          </div>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>

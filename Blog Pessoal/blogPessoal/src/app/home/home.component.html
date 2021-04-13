@@ -3,10 +3,9 @@
     <div class="row d-flex align-items-center">
       <div class="col-md-8">
         <h1 class="display-4">Seja bem vinde!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra
-          attention to featured content or information.</p>
+        <p class="lead">Aqui você pode expressar o seu sentimento e também apreciar e se motivar com os pensamentos de todos </p>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.
+        <p>Clique abaixo, escolha um tema e compartilhe seu pensamento! 
         </p>
 
         <a class="btn btn-success mr-3" data-toggle="modal" data-target="#novaPostagem" href="#"
@@ -136,8 +135,8 @@
               <textarea [(ngModel)]='postagem.texto' class="form-control" id="texto" name="texto" rows="5"></textarea>
             </div>
             <div class="form-group">
-              <label for="tema" class="col-form-label">Escolha um tema ou <a routerLink="/tema"
-                  data-dismiss="modal">cadastre um novo</a></label>
+              <label for="tema" class="col-form-label">Escolha um tema <a routerLink="/tema"
+                  data-dismiss="modal">ou cadastre um novo</a></label>
               <select class="form-control" id="tema" name="tema" [(ngModel)]='idTema' (change)="findByIdTema()">
                 <option *ngFor="let item of listaTemas" value="{{item.id}}">{{item.descricao}}
 

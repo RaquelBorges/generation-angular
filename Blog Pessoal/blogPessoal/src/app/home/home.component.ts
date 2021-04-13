@@ -27,12 +27,13 @@ export class HomeComponent implements OnInit {
   reverse = true
   tituloPost: string
   nomeTema: string
+  
 
   constructor(
     private router: Router,
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private authService: AuthService,
+    public authService: AuthService,
     private alerta: AlertaService
 
   ) { }
@@ -48,6 +49,7 @@ export class HomeComponent implements OnInit {
       this.router.navigate(["/login"])
 
     }
+    console.log(environment.tipo)
 
   }
 

@@ -14,6 +14,8 @@ export class TemaComponent implements OnInit {
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
+  tipo = environment.tipo
+  admin = "admin"
 
   constructor(
     private router: Router,
@@ -31,6 +33,11 @@ export class TemaComponent implements OnInit {
       this.alerta.showAlertInfo("sua sessão expirou")
       this.router.navigate(["/login"])
     }
+    /*if(environment.tipo != "admin")
+    {
+      this.alerta.showAlertInfo("Você precisa ser administrador para acessar essa rota")
+      this.router.navigate(['/home'])
+    }*/
   }
 
   findAllTema()
@@ -49,5 +56,5 @@ export class TemaComponent implements OnInit {
       this.findAllTema()
     })
   }
-
+ 
 }
