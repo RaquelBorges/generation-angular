@@ -17,4 +17,10 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  sair()
+  {
+    environment.token = ""
+    
+  }
+
 }

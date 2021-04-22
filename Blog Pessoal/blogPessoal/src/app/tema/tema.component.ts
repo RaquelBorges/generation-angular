@@ -33,11 +33,11 @@ export class TemaComponent implements OnInit {
       this.alerta.showAlertInfo("sua sessão expirou")
       this.router.navigate(["/login"])
     }
-    /*if(environment.tipo != "admin")
+    if(environment.tipo != "admin")
     {
       this.alerta.showAlertInfo("Você precisa ser administrador para acessar essa rota")
       this.router.navigate(['/home'])
-    }*/
+    }
   }
 
   findAllTema()

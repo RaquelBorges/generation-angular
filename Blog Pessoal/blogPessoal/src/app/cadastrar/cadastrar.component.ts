@@ -31,14 +31,21 @@ export class CadastrarComponent implements OnInit {
     this.confirmSenha = event.target.value
   }
 
-  tipoUsuario (event: any)
+  /*tipoUsuario (event: any)
   {
     this.tipoUser = event.target.value
-  }
+  }*/
 
   cadastrar ()
   {
-    this.user.tipo = this.tipoUser
+    if(this.user.usuario.includes("admin"))
+    {
+      this.user.tipo = "admin"
+    }
+    else
+    {
+      this.user.tipo = "normal"
+    }
 
     if (this.user.senha != this.confirmSenha)
     {

@@ -1,13 +1,3 @@
-.fa-sign-out-alt
-{
-    color: rgb(230, 100, 100);
-    padding-left: 5px;
-}
-.fa-user-edit
-{
-    padding: 10px;
-}
-
 .img-circle
 {
     border-radius: 50%;
@@ -18,4 +8,20 @@
 {
     font-size: 16pt;
     font-weight: bolder;
+}
+
+.fs-14
+{
+    font-size: 14pt;
+}
+
+.fa-home
+{
+    font-size: 30px;
+}
+
+.item-menu
+{
+    text-decoration: none;
+    color: black;
 }

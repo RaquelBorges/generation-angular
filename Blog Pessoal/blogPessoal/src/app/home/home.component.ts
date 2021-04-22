@@ -27,6 +27,8 @@ export class HomeComponent implements OnInit {
   reverse = true
   tituloPost: string
   nomeTema: string
+  tipo = environment.tipo
+  admin = "admin"
   
 
   constructor(
@@ -49,7 +51,6 @@ export class HomeComponent implements OnInit {
       this.router.navigate(["/login"])
 
     }
-    console.log(environment.tipo)
 
   }
 

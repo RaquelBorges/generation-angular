@@ -1,16 +1,16 @@
-<div class="container-fluid bg-secondary">
+<div class="container-fluid bg-light">
     <div class="row">
-        <div class="col-md-12 text-white">
-            <h2 class="fs-54 text-center">Temas</h2>
-            <h5 class="text-center">Veja aqui todos os temas cadastrados ou cadastre um novo</h5>
+        <div class="col-md-12 text-secondary">
+            <h3 class="text-center mt-2">Temas</h3>
+            <h5 class="text-center">Veja aqui todos os temas, edite ou cadastre um novo abaixo</h5>
         </div>
     </div>
 
     <div class="row d-flex justify-content-center mt-4 mb-5">
-        <div *ngIf="tipo == admin" class="col-md-3">
+        <div class="col-md-3">
             <div class="form-group">
                 <input [(ngModel)]="tema.descricao" type="text" class="form-control" id="descricao"
-                    placeholder="Digite aqui a descrição do tema">
+                    placeholder="Cadastre um novo tema">
             </div>
             <div class="d-flex justify-content-center mb-3">
                 <button class="btn btn-success" (click)="cadastrarTema()">Cadastrar</button>
@@ -40,7 +40,7 @@
                     <tr *ngFor="let tema of listaTemas">
                         <th> {{tema.id}} </th>
                         <td> {{tema.descricao}}</td>
-                        <td *ngIf="tipo == admin" class="d-flex justify-content-end">
+                        <td class="d-flex justify-content-end">
                             <button class="btn btn-success mr-3" [routerLink]="['/tema-edit', tema.id]">Editar</button>
                             <button class="btn btn-danger" [routerLink]="['/tema-delete', tema.id]">Apagar</button>
                         </td>
